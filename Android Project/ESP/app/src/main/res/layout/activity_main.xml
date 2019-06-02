@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <EditText
+        android:id="@+id/ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="192.168.43.103" />
+
+    <Button
+        android:id="@+id/bon_D13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lights ON [D7 visual]" />
+
+    <Button
+        android:id="@+id/boff_D13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lights OFF [D7 visual]" />
+
+    <Button
+        android:id="@+id/bon_D15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Computer ON [D8 visual]" />
+
+    <Button
+        android:id="@+id/boff_D15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Computer OFF [D8 visual]" />
+
+    <TextView
+        android:id="@+id/info1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/info2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold" />
+</LinearLayout>
