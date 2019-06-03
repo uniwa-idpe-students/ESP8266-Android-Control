@@ -3,8 +3,8 @@
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
  
-const char* ssid = "CYTA023C";
-const char* password = "026813_virus";
+const char* ssid = "Redmi";
+const char* password = "123456789";
 
 MDNSResponder mdns;
 
@@ -16,7 +16,7 @@ const int pin_13 = 13;
 
 void handleRoot() {
   server.send(200, "text/plain", 
-    "hello from esp8266!) \n/on: to tuen LED ON \n/off: to tuen LED OFF \n");
+    "hello from esp8266!) \n/on: to turn LED ON \n/off: to turn LED OFF \n");
 }
 
 void handleNotFound(){
@@ -39,7 +39,7 @@ void setup(void){
   pinMode(pin_13, OUTPUT);
   pinMode(pin_15, OUTPUT);
   Serial.begin(115200);
-  WiFi.begin("CYTA023C", "026813_virus");
+  WiFi.begin(ssid, password);
   Serial.println("");
 
   // Wait for connection
@@ -61,12 +61,12 @@ void setup(void){
 
   server.on("/on_D13", [](){ //D7 Visual
     digitalWrite(pin_13, 1);
-    server.send(200, "text/plain", "LED 13 ON");
+    server.send(200, "text/html", "<html><head><title>LED 13</title></head><body><div align='center'<h1>LED 13 is ON</h1><br><button><a href='/off_D13'>Press here to set if off</a></button></div></body></html>");
   });
   
   server.on("/off_D13", [](){ //D7 Visual
     digitalWrite(pin_13, 0);
-    server.send(200, "text/plain", "LED 13 OFF");
+    server.send(200, "text/html", "<html><head><title>LED 13</title></head><body><div align='center'<h1>LED 13 is OFF</h1><br><button><a href='/on_D13'>Press here to set if on</a></button></div></body></html>");
   });
 
     server.on("/on_D15", [](){ //D8 Visual
