@@ -61,22 +61,22 @@ void setup(void){
 
   server.on("/on_D13", [](){ //D7 Visual
     digitalWrite(pin_13, 1);
-    server.send(200, "text/html", "<html><head><title>LED 13</title></head><body><div align='center'<h1>LED 13 is ON</h1><br><button><a href='/off_D13'>Press here to set if off</a></button></div></body></html>");
+    server.send(200, "text/html", "Lights are on");
   });
   
   server.on("/off_D13", [](){ //D7 Visual
     digitalWrite(pin_13, 0);
-    server.send(200, "text/html", "<html><head><title>LED 13</title></head><body><div align='center'<h1>LED 13 is OFF</h1><br><button><a href='/on_D13'>Press here to set if on</a></button></div></body></html>");
+    server.send(200, "text/html", "Lights are off");
   });
 
     server.on("/on_D15", [](){ //D8 Visual
     digitalWrite(pin_15, 1);
-    server.send(200, "text/plain", "LED 15 ON");
+    server.send(200, "text/plain", "Computer is running");
   });
 
     server.on("/off_D15", [](){ //D8 visual
     digitalWrite(pin_15, 0);
-    server.send(200, "text/plain", "LED 15 OFF");
+    server.send(200, "text/plain", "Computer shut down");
   });
 
   server.onNotFound(handleNotFound);
