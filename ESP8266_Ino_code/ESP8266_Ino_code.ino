@@ -16,7 +16,7 @@ const int pin_13 = 13;
 
 void handleRoot() {
   server.send(200, "text/plain", 
-    "hello from esp8266!) \n/on: to turn LED ON \n/off: to turn LED OFF \n");
+    "Hello from ESP server! Give me a task.");
 }
 
 void handleNotFound(){
@@ -78,6 +78,7 @@ void setup(void){
     digitalWrite(pin_15, 0);
     server.send(200, "text/plain", "Computer shut down");
   });
+
 
   server.onNotFound(handleNotFound);
   
