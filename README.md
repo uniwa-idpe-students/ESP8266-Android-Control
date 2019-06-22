@@ -1,5 +1,6 @@
 # ESP8266-Android-Control
-Control ESP8266 using your android device, [be default, on the local network]
+Control ESP8266 using your android device, [by default, on the local network]. 
+This projects has two parts: the Esp8266 Code, the android App code
 
 [![Screenshot-2019-06-02-19-32-44-684-com-androidapp-esp8266-pin-ct.png](https://i.postimg.cc/MKC2hGRQ/Screenshot-2019-06-02-19-32-44-684-com-androidapp-esp8266-pin-ct.png)](https://postimg.cc/4mQScsWf)
 
